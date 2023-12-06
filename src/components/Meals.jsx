@@ -3,7 +3,7 @@ import { AppContext, AppProvider } from "../Context";
 import { GrLike } from "react-icons/gr";
 
 const Meals = ()=>{
-    const {loading, meals} = useContext(AppContext);
+    const {loading, meals, selectMeal} = useContext(AppContext);
     if(loading){
         return(<>
         <section>
@@ -24,8 +24,8 @@ const Meals = ()=>{
             const {idMeal, strMeal : title, strMealThumb: image} = singleMeals;
             return(<>
             <article key={idMeal} className="single-meal">
-                <img src={image} style={{width:"200px"}} className="img"/>
-                <footer>
+                <img src={image} className="img" onClick={()=>selectMeal(idMeal)}/>
+                <footer className="single-meal-title-area">
                     <h5>{title}</h5>
                     <button><GrLike /></button>
                 </footer>

@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+*{
+  padding: 0px;
+  margin: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  height: 100vh;
+  width: 100vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* -----------------Search component -----------------------*/
+.search-container{
+  background-color: white;
+  width: 100vw;
+  height: 90px;
+  padding-top: 3rem;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  
+}
+.search-container form{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  gap:0.5rem;
+}
+.form-input{
+  margin-left: 10rem;
+  padding: 5px;
+  background-color: #00bcd41a;
+  border-radius: 5px;
+  border: 2px solid lightgray;
+}
+.btn{
+ background-color:#050558;
+ padding: 0.5rem;
+ color: white;
+ font-weight:bold;
+ border:none;
+ border-radius: 5px;
+}
+.btn-hipster{
+  background-color: #6bb1e97d;
+  color:#050558;
 }
 
-.App-link {
-  color: #61dafb;
+
+/*----------------------------meals component --------------------*/
+.section-center{
+  background-color: #00bcd41a;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 350px;
+  row-gap: 0.8rem;
+  column-gap: 0.8rem;
+  padding-left: 10rem;
+}
+.single-meal{
+  margin: 3rem 0;
+  background-color: white;
+  width: 400px;
+  height: 300px;
+  border-radius: 5px;
+}
+.img{
+  width: 100%;
+  height: 80%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.single-meal-title-area{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* -----------------Model-----------------------------*/
+.model-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: grid;
+  place-items: center;
+  transition: 2s;
+  z-index: 1;
+}
+.model-container{
+  width: 80vw;
+  height: 80vh;
+  background-color: white;
+  border-radius: 5px;
 }
